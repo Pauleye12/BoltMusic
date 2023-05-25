@@ -7,13 +7,13 @@ function Welcome() {
       name: "Total Titratable Acid (TTA)",
       details:
         "An analysis carried out on finished product to determine the total acid present as a result of all the ingredients used in the formulation of the product",
-      link: "/tta",
+      link: "/welcome/tta",
     },
     {
-      name: "Total Fat Analysis",
+      name: "Agar Preparation Assistant",
       details:
-        "An analysis carried out on finished product to determine the total fat content as a result of all the ingredients used in the formulation of the product",
-      link: "/tta",
+        "An assistant designed to assist you with agar preparation and important informations you need to be aware of.",
+      link: "/welcome/agarprep",
     },
     {
       name: "Molar Mass Determination",

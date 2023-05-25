@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -6,6 +6,7 @@ import {
 import Login from './components/Login'
 import Welcome from './components/Welcome'
 import TTA from './components/TTA';
+import AgarPrep from './components/AgarPrep';
 
 
 
@@ -19,8 +20,12 @@ const router = createBrowserRouter([
     element: <Welcome />,
   },
   {
-    path: "/tta",
+    path: "/welcome/tta",
     element: <TTA />,
+  },
+  {
+    path: "/welcome/agarprep",
+    element: <AgarPrep />,
   },
 ]);
 
