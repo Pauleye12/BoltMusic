@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { app, analytics } from "../../firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const auth = getAuth();
+  const navigate = useNavigate();
 
   const [info, setInfo] = useState({
-    email: '',
-    password: ''
-  })
+    email: "",
+    password: "",
+  });
+
+  const [error, setError] = useState(false)
 
   const updateInfo = (val) => {
     return (e) => {
@@ -19,17 +22,19 @@ function Login() {
   };
 
   const handleLogin = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    setError(false)
     signInWithEmailAndPassword(auth, info.email, info.password)
       .then((resp) => {
-      //signed In
-        console.log(resp.user)
+        //signed In
+        setError(false)
+        navigate("/welcome");
       })
       .catch((err) => {
-      alert(err.message)
-    })
-  }
-  
+        setError(true)
+        alert(err.message);
+      });
+  };
 
   return (
     <div className="flex h-[100vh] w-[100vw] justify-center items-center bg-[#252525]">
@@ -49,7 +54,7 @@ function Login() {
               id="email"
               placeholder="Email"
               value={info.email}
-              onChange={updateInfo('email')}
+              onChange={updateInfo("email")}
             />
           </div>
           <div className="flex flex-col gap-[5px]">
@@ -66,11 +71,13 @@ function Login() {
               onChange={updateInfo("password")}
             />
           </div>
-          <Link to={"/welcome"}>
-            <button className=" text-[white] font-[700] text-xl px-[13px] border-2 rounded-md border-[#36f14cad] w-[100%] py-[5px] mt-[20px] bg-[#054710dc]" onClick={handleLogin}>
-              Login
-            </button>
-          </Link>
+          {error && <p className="text-[red] font-bold">Login failed</p>}
+          <button
+            className=" text-[white] font-[700] text-xl px-[13px] border-2 rounded-md border-[#36f14cad] w-[100%] py-[5px] mt-[20px] bg-[#054710dc]"
+            onClick={handleLogin}
+          >
+            Login
+          </button>
         </form>
       </div>
     </div>
