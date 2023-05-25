@@ -14,13 +14,13 @@ function Welcome() {
       details:
         "An assistant designed to assist you with agar preparation and important informations you need to be aware of.",
       link: "/welcome/agarprep",
-    },
-    {
-      name: "Molar Mass Determination",
-      details:
-        "An analysis carried out on finished product to determine the total acid present as a result of all the ingredients used in the formulation of the product",
-      link: "yenyen",
-    },
+    }
+    // {
+    //   name: "Molar Mass Determination",
+    //   details:
+    //     "An analysis carried out on finished product to determine the total acid present as a result of all the ingredients used in the formulation of the product",
+    //   link: "yenyen",
+    // },
   ];
   return (
     <div className="bg-[#252525] h-[100vh] w-[100vw] text-[black] grid place-items-center">
