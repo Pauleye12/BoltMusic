@@ -49,7 +49,7 @@ function SongPrev({ disp }) {
   const closePopUp = () => setPopUp(false);
 
   return (
-    <div className="w-full flex flex-col gap-[16px] px-[20px] py-[5px] bg-[#212121] rounded-lg border-b-[1px] border-[#ffa034] pb-[20px] ">
+    <div className="w-full flex flex-col gap-[16px] px-[20px] py-[5px] bg-[#212121] rounded-lg border-b-[1px] border-[#ffa034] pb-[20px] pt-[20px] ">
       <div className="flex justify-between items-center gap-[15px]">
         <div>
           <img className=" rounded-md max-w-[50px]" src={disp.image} alt="" />

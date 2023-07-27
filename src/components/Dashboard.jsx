@@ -5,20 +5,20 @@ import SongPrev from "../SongPrev";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function Dashboard() {
-
+ let uid
   const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
-      const uid = user.email;
-      console.log(uid);
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    }
-  });
+  // onAuthStateChanged(auth, (user) => {
+  //   if (user) {
+  //     // User is signed in, see docs for a list of available properties
+  //     // https://firebase.google.com/docs/reference/js/auth.user
+  //     uid = user.email;
+  //     console.log(uid);
+  //     // ...
+  //   } else {
+  //     // User is signed out
+  //     // ...
+  //   }
+  // });
 
   
   const [dispData, setDispData] = useState([ ])
@@ -130,7 +130,7 @@ function Dashboard() {
             className="absolute text-[#ffa034] text-[28px] font-[600] top-[20px] 
            left-[15px] uppercase "
           >
-            Hello,
+            {`hello,`}
           </h1>
           <div className=" md:hidden flex gap-[50px] items-center fixed px-[20px] py-[7px] justify-center top-[0px] left-[0px] w-full z-50 bg-[#212121]">
             <div className="flex justify-center items-center ">
