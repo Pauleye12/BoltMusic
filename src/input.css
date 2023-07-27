@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.topSongs{
+    background-image:linear-gradient(to bottom, #181a1da6, #16181d23), url("./images/topSongss.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.Asake{
+    background-image:linear-gradient(to bottom, #181a1da6, #16181d23), url("./images/Asake.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.burnaBoy{
+    background-image:linear-gradient(to bottom, #181a1da6, #16181d23), url("./images/burnaBoy.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.wizkid{
+    background-image:linear-gradient(to bottom, #181a1da6, #16181d23), url("./images/wizkid.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

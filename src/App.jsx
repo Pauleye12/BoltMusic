@@ -4,9 +4,9 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import Login from './components/Login'
-import Welcome from './components/Welcome'
-import TTA from './components/TTA';
-import AgarPrep from './components/AgarPrep';
+import SignUp from './components/SignUp'
+import Dashboard from "./components/Dashboard";
+
 
 
 
@@ -16,16 +16,12 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/welcome",
-    element: <Welcome />,
+    path: "/Dashboard",
+    element: <Dashboard />,
   },
   {
-    path: "/welcome/tta",
-    element: <TTA />,
-  },
-  {
-    path: "/welcome/agarprep",
-    element: <AgarPrep />,
+    path: "/SignUp",
+    element: <SignUp />,
   },
 ]);
 
