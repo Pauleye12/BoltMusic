@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 function SongPrev({ disp }) {
-  const [play, setPlay] = useState(false);
-  const [show, setShow] = useState(false);
+//   const [play, setPlay] = useState(false);
+const [show, setShow] = useState(true);
   const [lyrics, setLyrics] = useState();
   const [popUp, setPopUp] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
     
-    const onToggle = () => {
-        setPlay((prev) => !prev)
-        setShow((prev)=> !prev)
-    }
+    // const onToggle = () => {
+    //     setPlay((prev) => !prev)
+    //     setShow((prev)=> !prev)
+    // }
   const baseApi = "https://hilarious-wig-hare.cyclic.app";
 
   const fetchLyrics = async (val, endpoint) => {
@@ -50,7 +50,7 @@ function SongPrev({ disp }) {
 
   return (
     <div className="w-full flex flex-col gap-[16px] px-[20px] py-[5px] bg-[#212121] rounded-lg border-b-[1px] border-[#ffa034] pb-[20px] pt-[20px] ">
-      <div className="flex justify-between items-center gap-[15px]">
+      <div className="flex items-center gap-[25px]">
         <div>
           <img className=" rounded-md max-w-[50px]" src={disp.image} alt="" />
         </div>
@@ -58,7 +58,7 @@ function SongPrev({ disp }) {
           <h1 className="font-[500] text-[18px]">{disp.title}</h1>
           <h2>{disp.subtitle}</h2>
         </div>
-        <div
+        {/* <div
           className="bg-[#ffa034] rounded-full grid place-items-center  "
           onClick={onToggle}
         >
@@ -67,7 +67,7 @@ function SongPrev({ disp }) {
             src={!play ? "./images/play.png" : "./images/pause.png"}
             alt=""
           />
-        </div>
+        </div> */}
       </div>
 
       <div className="w-full flex gap-[20px] items-center">
